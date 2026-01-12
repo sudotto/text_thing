@@ -26,7 +26,7 @@ int main(int argc, char* argv[]){
 					letter_index = string[letter] - 'A'; 
 				} else if(string[letter] >= '0' && string[letter] <= '9'){
 					// same shit that rosaOS does
-					letter_index = string[letter] - '0'; 
+					letter_index = string[letter] - '0' + 26; // 26 is offset in charmap for number section 
 				}
 				strcat(big[line], charmap[letter_index][line]);
 				strcat(big[line], " "); // spacing
